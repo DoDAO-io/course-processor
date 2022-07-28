@@ -9,3 +9,21 @@
     This video explains about
     * Point 1
     * Point 2
+  questions:
+    - timeInSec: 30
+      uuid: d118157f-2d86-4ee3-bedc-de508017477a
+      type: MultipleChoice
+      content: Which of the following is not a valid data location for a reference data type in solidity?
+      hint: noHint
+      explanation: address is a value type in solidity whearas memory , storage and calldata are data locations for "reference-types".
+      answerKeys:
+        - C
+      choices:
+        - content: memory
+          key: A
+        - content: storage
+          key: B
+        - content: address
+          key: C
+        - content: calldata
+          key: D

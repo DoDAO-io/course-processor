@@ -34,61 +34,24 @@
         },
         "details": {
           "type": "string"
-        }
-      },
-      "required": [
-        "uuid",
-        "title",
-        "type",
-        "url",
-        "shortTitle",
-        "subTopics",
-        "details"
-      ]
-    },
-    {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string"
         },
-        "shortTitle": {
-          "type": "string",
-          "maxLength": 20
-        },
-        "uuid": {
-          "type": "string"
-        },
-        "type": {
-          "type": "string"
-        },
-        "url": {
-          "type": "string"
-        },
-        "subTopics": {
+        "questions" : {
           "type": "array",
-          "items": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "string"
-            }
-          ]
-        },
-        "details": {
-          "type": "string"
+          "items": {
+            "$ref": "/ReadingsQuestionSchema"
+          }
         }
       },
       "required": [
         "uuid",
         "title",
-        "shortTitle",
         "type",
         "url",
+        "shortTitle",
         "subTopics",
         "details"
-      ]
+      ],
+      "additionalProperties": false
     }
   ],
   "additionalProperties": false
