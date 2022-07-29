@@ -33,84 +33,47 @@
     },
     "topics": {
       "type": "array",
-      "items": [
-        {
-          "type": "object",
-          "properties": {
-            "title": {
-              "type": "string"
-            },
-            "details": {
-              "type": "string"
-            },
-            "key": {
-              "type": "string"
-            },
-            "readings": {
-              "type": "string"
-            },
-            "summaries": {
-              "type": "string"
-            },
-            "questions": {
-              "type": "string"
-            },
-            "status": {
-              "type": "string"
-            },
-            "completionWeek": {
-              "type": "string"
-            }
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
           },
-          "required": [
-            "title",
-            "details",
-            "key",
-            "readings",
-            "summaries",
-            "questions"
-          ],
-          "additionalProperties": false
+          "details": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "readings": {
+            "type": "string"
+          },
+          "summaries": {
+            "type": "string"
+          },
+          "questions": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "completionWeek": {
+            "type": "string"
+          },
+          "mindMap": {
+            "type": "string"
+          }
         },
-        {
-          "type": "object",
-          "properties": {
-            "title": {
-              "type": "string"
-            },
-            "key": {
-              "type": "string"
-            },
-            "details": {
-              "type": "string"
-            },
-            "readings": {
-              "type": "string"
-            },
-            "summaries": {
-              "type": "string"
-            },
-            "questions": {
-              "type": "string"
-            },
-            "status": {
-              "type": "string"
-            },
-            "completionWeek": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "title",
-            "details",
-            "key",
-            "readings",
-            "summaries",
-            "questions"
-          ],
-          "additionalProperties": false
-        }
-      ],
+        "required": [
+          "title",
+          "details",
+          "key",
+          "readings",
+          "summaries",
+          "questions"
+        ],
+        "additionalProperties": false
+      },
       "additionalProperties": false
     }
   },
