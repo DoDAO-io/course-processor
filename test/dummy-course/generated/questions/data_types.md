@@ -560,7 +560,7 @@ Sub Topics: value-types
 - [ ]  A contract cannot create other contracts using the new keyword.
 - [x]  None of these.
   
-Hint: hint
+Hint: noHint
          
 Explanation: explanation
 
@@ -624,7 +624,7 @@ Sub Topics: value-types
 - [ ]  You can acess values in a memory array after execution of the smart contract.
 - [x]  They cost less gas compared to storage arrays.
   
-Hint: hint
+Hint: noHint
          
 Explanation: Memory arrays with dynamic length can be created using the new operator. As opposed to storage arrays, it is not possible to resize memory arrays (e.g. the .push member functions are not available). The Solidity Smart Contract can use any amount of memory during the execution but once the execution stops, the Memory is completely wiped off for the next execution.
 
@@ -766,7 +766,7 @@ Sub Topics: value-types
 
 ##### Which of the following are valid literals for solidity data types?  
 
-- [x]  25
+- [x]  2.5e1
 - [x]   'foo' 'bar' 
 - [x]  hex"001122FF"
 - [ ]  None of these

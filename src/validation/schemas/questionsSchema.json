@@ -1,81 +1,80 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "array",
-  "items": [
-    {
-      "type": "object",
-      "properties": {
-        "uuid": {
-          "type": "string"
-        },
-        "type": {
-          "type": "string"
-        },
-        "content": {
-          "type": "string"
-        },
-        "hint": {
-          "type": "string"
-        },
-        "explanation": {
-          "type": "string"
-        },
-        "answerKeys": {
-          "type": "array",
-          "items": [
-            {
-              "type": "string"
-            }
-          ]
-        },
-        "subTopics": {
-          "type": "array",
-          "items": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "string"
-            }
-          ]
-        },
-        "difficultyLevel": {
-          "type": "string"
-        },
-        "choices": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "content": {
-                "type": "string"
-              },
-              "key": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "content",
-              "key"
-            ],
-            "additionalProperties": false
-          },
-          "additionalProperties": false
-        }
+  "items":     {
+    "type": "object",
+    "properties": {
+      "uuid": {
+        "type": "string"
       },
-      "required": [
-        "uuid",
-        "type",
-        "content",
-        "hint",
-        "explanation",
-        "answerKeys",
-        "subTopics",
-        "difficultyLevel",
-        "choices"
-      ],
-      "additionalProperties": false
-    }
-  ],
+      "type": {
+        "type": "string"
+      },
+      "content": {
+        "type": "string"
+      },
+      "hint": {
+        "type": "string",
+        "minLength": 6
+      },
+      "explanation": {
+        "type": "string"
+      },
+      "answerKeys": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "minLength": 1
+      },
+      "subTopics": {
+        "type": "array",
+        "items": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "difficultyLevel": {
+        "type": "string"
+      },
+      "choices": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "content": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "content",
+            "key"
+          ],
+          "additionalProperties": false
+        },
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "uuid",
+      "type",
+      "content",
+      "hint",
+      "explanation",
+      "answerKeys",
+      "subTopics",
+      "difficultyLevel",
+      "choices"
+    ],
+    "additionalProperties": false
+  }
+,
   "additionalProperties": false
 }

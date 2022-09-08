@@ -1123,7 +1123,7 @@
           "uuid": "69254f63-d913-4863-a7b2-8398986ccd09",
           "type": "MultipleChoice",
           "content": "Which of the following is correct about contract types in solidity?",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "explanation",
           "answerKeys": [
             "D"
@@ -1251,7 +1251,7 @@
           "uuid": "b6b96712-83df-49b7-8b54-cab1d3630e3d",
           "type": "MultipleChoice",
           "content": "In the context of memory arrays which of the following statements are true?",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "Memory arrays with dynamic length can be created using the new operator. As opposed to storage arrays, it is not possible to resize memory arrays (e.g. the .push member functions are not available). The Solidity Smart Contract can use any amount of memory during the execution but once the execution stops, the Memory is completely wiped off for the next execution.",
           "answerKeys": [
             "A",
@@ -1557,7 +1557,7 @@
           "difficultyLevel": "Low",
           "choices": [
             {
-              "content": "25",
+              "content": "2.5e1",
               "key": "A"
             },
             {
