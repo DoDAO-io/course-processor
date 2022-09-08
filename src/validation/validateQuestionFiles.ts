@@ -9,6 +9,7 @@ import questionsFileSchema from './schemas/questionsSchema.json';
 export function validateQuestionFiles(questionDirectory: string) {
   const questionFiles = readFilesSync(questionDirectory);
   questionFiles.forEach(questionFile => {
+    console.log('validate questions file ', questionFile.filepath);
     const file = fs.readFileSync(questionFile.filepath, 'utf8');
     const questionsJson = YAML.parse(file) as Question[];
     const v = new Validator();
@@ -20,7 +21,7 @@ export function validateQuestionFiles(questionDirectory: string) {
     questionsJson.forEach(question => {
       if (!Array.isArray(question.answerKeys)) {
         throw Error(
-          `Answer Keys of question: ${question.content} is not an array`
+          `Answer Keys of question: ${question.content} is not an array. File ${questionFile.filepath}`
         );
       }
     });

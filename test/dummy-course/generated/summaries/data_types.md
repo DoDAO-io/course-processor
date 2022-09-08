@@ -14,4 +14,7 @@ This is the course header. This will be added on top of every page. Do to [DoDAO
  **Mapping Type**        
 - Value type1
  
+ **Mapping Type 1**        
+- Value type1
+ 
  

@@ -13,3 +13,8 @@
   key: mapping-type
   details: |
     - Value type1
+- title: Mapping Type 1
+  shortTitle: Mapping Types
+  key: mapping-type1
+  details: |
+    - Value type1

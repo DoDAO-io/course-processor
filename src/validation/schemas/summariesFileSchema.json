@@ -1,79 +1,31 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "array",
-  "items": [
-    {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string"
-        },
-        "shortTitle": {
-          "type": "string",
-          "maxLength": 20
-        },
-        "key": {
-          "type": "string"
-        },
-        "details": {
-          "type": "string"
-        }
+  "items":     {
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 5
       },
-      "required": [
-        "title",
-        "shortTitle",
-        "key",
-        "details"
-      ]
+      "shortTitle": {
+        "type": "string",
+        "maxLength": 20
+      },
+      "key": {
+        "type": "string",
+        "minLength": 4
+      },
+      "details": {
+        "type": "string"
+      }
     },
-    {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string"
-        },
-        "shortTitle": {
-          "type": "string",
-          "maxLength": 20
-        },
-        "key": {
-          "type": "string"
-        },
-        "details": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "title",
-        "shortTitle",
-        "key",
-        "details"
-      ]
-    },
-    {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string"
-        },
-        "shortTitle": {
-          "type": "string",
-          "maxLength": 20
-        },
-        "key": {
-          "type": "string"
-        },
-        "details": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "title",
-        "shortTitle",
-        "key",
-        "details"
-      ]
-    }
-  ],
+    "required": [
+      "title",
+      "shortTitle",
+      "key",
+      "details"
+    ],
+    "additionalProperties": false
+  },
   "additionalProperties": false
 }

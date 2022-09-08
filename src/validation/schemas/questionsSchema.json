@@ -44,68 +44,22 @@
         },
         "choices": {
           "type": "array",
-          "items": [
-            {
-              "type": "object",
-              "properties": {
-                "content": {
-                  "type": "string"
-                },
-                "key": {
-                  "type": "string"
-                }
+          "items": {
+            "type": "object",
+            "properties": {
+              "content": {
+                "type": "string"
               },
-              "required": [
-                "content",
-                "key"
-              ]
+              "key": {
+                "type": "string"
+              }
             },
-            {
-              "type": "object",
-              "properties": {
-                "content": {
-                  "type": "string"
-                },
-                "key": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "content",
-                "key"
-              ]
-            },
-            {
-              "type": "object",
-              "properties": {
-                "content": {
-                  "type": "string"
-                },
-                "key": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "content",
-                "key"
-              ]
-            },
-            {
-              "type": "object",
-              "properties": {
-                "content": {
-                  "type": "string"
-                },
-                "key": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "content",
-                "key"
-              ]
-            }
-          ],
+            "required": [
+              "content",
+              "key"
+            ],
+            "additionalProperties": false
+          },
           "additionalProperties": false
         }
       },
@@ -119,7 +73,8 @@
         "subTopics",
         "difficultyLevel",
         "choices"
-      ]
+      ],
+      "additionalProperties": false
     }
   ],
   "additionalProperties": false
