@@ -16,6 +16,7 @@ topics:
   - title: Blockchain Basics
     key: blockchain-basics
     details: This chapter explains the basics of blockchian
+    explanations: data_types.yaml
     readings: data_types.yaml
     summaries: data_types.yaml
     questions: data_types.yaml

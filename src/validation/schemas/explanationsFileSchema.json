@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items":     {
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 5
+      },
+      "shortTitle": {
+        "type": "string",
+        "maxLength": 20
+      },
+      "key": {
+        "type": "string",
+        "minLength": 4
+      },
+      "details": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "title",
+      "shortTitle",
+      "key",
+      "details"
+    ],
+    "additionalProperties": false
+  },
+  "additionalProperties": false
+}

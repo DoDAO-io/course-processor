@@ -17,6 +17,20 @@
       "key": "blockchain-basics",
       "details": "This chapter explains the basics of blockchian",
       "order": 0,
+      "explanations": [
+        {
+          "title": "Value Types",
+          "shortTitle": "Value Types",
+          "key": "value-types",
+          "details": "- Details of Value type1\n"
+        },
+        {
+          "title": "Reference Types",
+          "shortTitle": "Reference Types",
+          "key": "reference-types",
+          "details": "- Details of Value type2\n- Line 2\n- Line 3\n"
+        }
+      ],
       "questions": [
         {
           "uuid": "89128b13-bd0f-4887-85c4-1308dfbc3234",

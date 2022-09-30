@@ -2,6 +2,7 @@ import { Course } from '../model/Course';
 import { readQuestions } from './../readers/readQuestions';
 import { readReadings } from './../readers/readReadings';
 import { readSummaries } from './../readers/readSummaries';
+import { readExplanations } from './../readers/readExplanations';
 import { CourseJson, CourseTopicJson } from './../model/CourseJson';
 
 export function getCoursesJson(
@@ -14,6 +15,9 @@ export function getCoursesJson(
     summary: topic.summary,
     details: topic.details,
     order: index,
+    explanations: topic.explanations
+      ? readExplanations(courseDirPath, topic.explanations)
+      : [],
     questions: topic.questions
       ? readQuestions(courseDirPath, topic.questions).map(question => {
           if (!Array.isArray(question.answerKeys)) {

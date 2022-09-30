@@ -45,6 +45,9 @@
           "key": {
             "type": "string"
           },
+          "explanations": {
+            "type": "string"
+          },
           "readings": {
             "type": "string"
           },

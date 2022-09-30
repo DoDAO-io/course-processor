@@ -1,5 +1,6 @@
 import { Command } from 'commander';
 import process from 'process';
+import { validateExplanationsFiles } from './validation/validateExplanationsFiles';
 import { generateCourseFiles } from './generators/generateCourseFiles';
 import { validateCourseFile } from './validation/validateCourseFile';
 import { validateQuestionFiles } from './validation/validateQuestionFiles';
@@ -13,6 +14,7 @@ export function validateFilesAndGenerateFiles(srcPath: string) {
   const courseDirPath = process.cwd() + '/' + srcPath;
   console.log('Validating Course...');
   validateCourseFile(`${courseDirPath}/course.yaml`);
+  validateExplanationsFiles(`${courseDirPath}/explanations`);
   validateSummariesFiles(`${courseDirPath}/summaries`);
   validateQuestionFiles(`${courseDirPath}/questions`);
   validateReadingsFiles(`${courseDirPath}/readings`);
@@ -30,6 +32,7 @@ export function validateFiles(srcPath: string) {
   const courseDirPath = process.cwd() + '/' + srcPath;
   console.log('Validating Course...');
   validateCourseFile(`${courseDirPath}/course.yaml`);
+  validateExplanationsFiles(`${courseDirPath}/details`);
   validateSummariesFiles(`${courseDirPath}/summaries`);
   validateQuestionFiles(`${courseDirPath}/questions`);
   validateReadingsFiles(`${courseDirPath}/readings`);

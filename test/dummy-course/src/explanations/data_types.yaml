@@ -1,0 +1,12 @@
+- title: Value Types
+  shortTitle: Value Types
+  key: value-types
+  details: |
+    - Details of Value type1
+- title: Reference Types
+  shortTitle: Reference Types
+  key: reference-types
+  details: |
+    - Details of Value type2
+    - Line 2
+    - Line 3

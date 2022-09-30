@@ -6,6 +6,7 @@ export interface CourseTopics {
   readings?: string;
   summaries?: string;
   questions?: string;
+  explanations?: string;
   status: string;
   completionWeek: string;
 }
