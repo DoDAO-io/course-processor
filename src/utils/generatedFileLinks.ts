@@ -2,6 +2,12 @@ import { CourseTopics } from './../model/CourseTopics';
 import { yamlToMarkdownExtension } from './../utils/yamlToMarkdownExtension';
 
 export function generatedFileLinks(topic: CourseTopics, relativePath = '') {
+  let explanationsLink = '';
+  if (topic.explanations) {
+    // prettier-ignore
+    explanationsLink = `[Explanations](${relativePath}generated/explanations/${yamlToMarkdownExtension(topic.explanations)}`;
+  }
+
   let questionsLink = '';
   if (topic.questions) {
     // prettier-ignore
@@ -21,6 +27,7 @@ export function generatedFileLinks(topic: CourseTopics, relativePath = '') {
   }
 
   return {
+    explanationsLink,
     questionsLink,
     readingsLink,
     summariesLink,

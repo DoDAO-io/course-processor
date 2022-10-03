@@ -5,6 +5,7 @@ import { Course } from '../model/Course';
 import { getCoursesJson } from '../utils/getCoursesJson';
 import { writeFileSync } from '../utils/writeFileSync';
 import { CourseJson } from './../model/CourseJson';
+import { generateExplanations } from './generateExplanations';
 import { generateQuestions } from './generateQuestions';
 import { generateReadings } from './generateReadings';
 import { generateSummaries } from './generateSummaries';
@@ -18,6 +19,10 @@ function generateCourseTopicsTable(
 ) {
   return courseJson.topics
     .map((topic, index) => {
+      if (topic.explanations) {
+        generateExplanations(courseDirPath, topic.title, topic.explanations);
+      }
+
       if (topic.questions) {
         generateQuestions(courseDirPath, topic.title, topic.questions);
       }
@@ -30,9 +35,12 @@ function generateCourseTopicsTable(
         generateSummaries(courseDirPath, topic.title, topic.summaries);
       }
 
-      const { questionsLink, readingsLink, summariesLink } = generatedFileLinks(
-        topic
-      );
+      const {
+        explanationsLink,
+        questionsLink,
+        readingsLink,
+        summariesLink,
+      } = generatedFileLinks(topic);
 
       const contentsString = courseJsonObject.topics
         .find(courseTopic => courseTopic.key === topic.key)!
@@ -43,7 +51,7 @@ function generateCourseTopicsTable(
 
       const topicDetailsFileLink = `[Details](generated/topics/${topic.key}.md)`;
       // prettier-ignore
-      return `| ${index + 1}      | ${topic.title} | ${contentsString}| ${topicDetailsFileLink} <br/> ${summariesLink} <br/> ${readingsLink} <br/> ${questionsLink} | ${topic.status} | ${topic.completionWeek} |`
+      return `| ${index + 1}      | ${topic.title} | ${contentsString}| ${topicDetailsFileLink} <br/> ${explanationsLink} <br/> ${summariesLink} <br/> ${readingsLink} <br/> ${questionsLink} | ${topic.status} | ${topic.completionWeek} |`
     })
     .join('\n ');
 }
@@ -78,6 +86,7 @@ function generateCourseTable(
 
 function createDirectoriesIfNotExists(courseDirPath: string) {
   const generatedFolder = `${courseDirPath}/../generated`;
+  const explanationsFolder = `${courseDirPath}/../generated/explanations`;
   const questionsFolder = `${courseDirPath}/../generated/questions`;
   const readingsFolder = `${courseDirPath}/../generated/readings`;
   const summariesFolder = `${courseDirPath}/../generated/summaries`;
@@ -85,6 +94,7 @@ function createDirectoriesIfNotExists(courseDirPath: string) {
 
   const foldersToGenerate = [
     generatedFolder,
+    explanationsFolder,
     questionsFolder,
     readingsFolder,
     summariesFolder,

@@ -32,7 +32,7 @@ export function validateFiles(srcPath: string) {
   const courseDirPath = process.cwd() + '/' + srcPath;
   console.log('Validating Course...');
   validateCourseFile(`${courseDirPath}/course.yaml`);
-  validateExplanationsFiles(`${courseDirPath}/details`);
+  validateExplanationsFiles(`${courseDirPath}/explanations`);
   validateSummariesFiles(`${courseDirPath}/summaries`);
   validateQuestionFiles(`${courseDirPath}/questions`);
   validateReadingsFiles(`${courseDirPath}/readings`);
