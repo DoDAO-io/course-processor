@@ -34,7 +34,7 @@ export function generateReadings(
         
         ${reading.details}    
         
-        Sub Topics: ${reading.subTopics.join(', ')}    
+        Sub Topics: ${reading.subTopics?.join(', ') || 'No Sub-Topics'}    
       `;
       })
       .join('\n ')}

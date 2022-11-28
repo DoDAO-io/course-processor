@@ -46,7 +46,7 @@ Hint: ${question.hint}
                
 Explanation: ${question.explanation}
 
-Sub Topics: ${question.subTopics.join(', ')}
+Sub Topics: ${question.subTopics?.join(', ') || 'No Sub-Topics'}
 `;
       })
       .join('\n \n')}
