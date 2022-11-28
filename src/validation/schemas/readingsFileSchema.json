@@ -48,7 +48,6 @@
         "type",
         "url",
         "shortTitle",
-        "subTopics",
         "details"
       ],
       "additionalProperties": false

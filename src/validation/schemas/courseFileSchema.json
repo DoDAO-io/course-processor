@@ -70,10 +70,7 @@
         "required": [
           "title",
           "details",
-          "key",
-          "readings",
-          "summaries",
-          "questions"
+          "key"
         ],
         "additionalProperties": false
       },

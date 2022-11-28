@@ -15,7 +15,7 @@
       },
       "hint": {
         "type": "string",
-        "minLength": 6
+        "minLength": 2
       },
       "explanation": {
         "type": "string"
@@ -69,8 +69,6 @@
       "hint",
       "explanation",
       "answerKeys",
-      "subTopics",
-      "difficultyLevel",
       "choices"
     ],
     "additionalProperties": false
