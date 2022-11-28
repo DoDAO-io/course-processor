@@ -1,14 +1,14 @@
 import fs from 'fs';
 import { Validator } from 'jsonschema';
-import { Question } from '../model/Question';
-import { throwValidationError } from './throwValidationError';
-import { readFilesSync } from '../utils/readFilesSync';
 import YAML from 'yaml';
+import { Question } from '../model/Question';
+import { readFilesSyncOptional } from '../utils/readFilesSync';
 import questionsFileSchema from './schemas/questionsSchema.json';
+import { throwValidationError } from './throwValidationError';
 
 export function validateQuestionFiles(questionDirectory: string) {
-  const questionFiles = readFilesSync(questionDirectory);
-  questionFiles.forEach(questionFile => {
+  const questionFiles = readFilesSyncOptional(questionDirectory);
+  questionFiles?.forEach(questionFile => {
     console.log('validate questions file ', questionFile.filepath);
     const file = fs.readFileSync(questionFile.filepath, 'utf8');
     const questionsJson = YAML.parse(file) as Question[];

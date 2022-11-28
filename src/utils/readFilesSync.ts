@@ -38,3 +38,11 @@ export function readFilesSync(dir: string) {
 
   return files;
 }
+
+export function readFilesSyncOptional(dir: string) {
+  try {
+    return readFilesSync(dir);
+  } catch (e) {}
+
+  return;
+}
