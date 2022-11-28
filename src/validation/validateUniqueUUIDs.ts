@@ -4,7 +4,7 @@ import YAML from 'yaml';
 import { Question } from '../model/Question';
 import { Reading } from '../model/Reading';
 import { Summary } from '../model/Summary';
-import { readFilesSync } from '../utils/readFilesSync';
+import { readFilesSyncOptional } from '../utils/readFilesSync';
 
 export function validateUniqueUUIDs(
   summariesDirectory: string,
@@ -14,8 +14,8 @@ export function validateUniqueUUIDs(
   const uuids: string[] = [];
   const subTopics: string[] = [];
 
-  const summaryFiles = readFilesSync(summariesDirectory);
-  summaryFiles.forEach(summaryFile => {
+  const summaryFiles = readFilesSyncOptional(summariesDirectory);
+  summaryFiles?.forEach(summaryFile => {
     const file = fs.readFileSync(summaryFile.filepath, 'utf8');
     const summariesJson = YAML.parse(file) as Summary[];
     summariesJson.forEach(summary => {
@@ -27,8 +27,8 @@ export function validateUniqueUUIDs(
     });
   });
 
-  const questionFiles = readFilesSync(questionDirectory);
-  questionFiles.forEach(questionFile => {
+  const questionFiles = readFilesSyncOptional(questionDirectory);
+  questionFiles?.forEach(questionFile => {
     const file = fs.readFileSync(questionFile.filepath, 'utf8');
     const questionsJson = YAML.parse(file) as Question[];
 
@@ -51,8 +51,8 @@ export function validateUniqueUUIDs(
     });
   });
 
-  const readingFiles = readFilesSync(readingsDirectory);
-  readingFiles.forEach(readingsFile => {
+  const readingFiles = readFilesSyncOptional(readingsDirectory);
+  readingFiles?.forEach(readingsFile => {
     const file = fs.readFileSync(readingsFile.filepath, 'utf8');
     const readingsJson = YAML.parse(file) as Reading[];
 
