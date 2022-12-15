@@ -31,6 +31,14 @@
     "thumbnail": {
       "type": "string"
     },
+    "courseAdmins": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
     "topics": {
       "type": "array",
       "items": {

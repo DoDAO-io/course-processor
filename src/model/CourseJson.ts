@@ -21,5 +21,6 @@ export interface CourseJson {
   highlights: string[];
   publishStatus: string;
   thumbnail: string;
+  courseAdmins?: string[];
   topics: CourseTopicJson[];
 }

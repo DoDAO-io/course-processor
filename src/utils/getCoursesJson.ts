@@ -49,6 +49,7 @@ export function getCoursesJson(
     highlights: courseJson.highlights,
     publishStatus: courseJson.publishStatus,
     thumbnail: courseJson.thumbnail,
+    courseAdmins: courseJson.courseAdmins || [],
     topics: topicsList,
   };
 
