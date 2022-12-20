@@ -52,6 +52,9 @@ export function getCoursesJson(
     courseAdmins: courseJson.courseAdmins || [],
     courseFailContent: courseJson.courseFailContent,
     coursePassContent: courseJson.coursePassContent,
+    coursePassCount: courseJson.coursePassCount?.trim()
+      ? parseInt(courseJson.coursePassCount)
+      : undefined,
     topics: topicsList,
   };
 

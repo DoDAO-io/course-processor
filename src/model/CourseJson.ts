@@ -19,6 +19,7 @@ export interface CourseJson {
   details: string;
   courseFailContent?: string;
   coursePassContent?: string;
+  coursePassCount?: number;
   duration: string;
   highlights: string[];
   publishStatus: string;
