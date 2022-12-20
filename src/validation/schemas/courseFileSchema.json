@@ -90,6 +90,8 @@
     "title",
     "summary",
     "details",
+    "courseFailContent",
+    "coursePassContent",
     "duration",
     "highlights",
     "publishStatus",

@@ -5,6 +5,8 @@ export interface Course {
   title: string;
   summary: string;
   details: string;
+  courseFailContent?: string;
+  coursePassContent?: string;
   duration: string;
   highlights: string[];
   publishStatus: string;

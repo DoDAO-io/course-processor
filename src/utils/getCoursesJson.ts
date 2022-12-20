@@ -50,6 +50,8 @@ export function getCoursesJson(
     publishStatus: courseJson.publishStatus,
     thumbnail: courseJson.thumbnail,
     courseAdmins: courseJson.courseAdmins || [],
+    courseFailContent: courseJson.courseFailContent,
+    coursePassContent: courseJson.coursePassContent,
     topics: topicsList,
   };
 
