@@ -1,3 +1,4 @@
+import { TopicConfig } from 'src/model/TopicConfig';
 import { Question } from './Question';
 import { Reading } from './Reading';
 import { Summary } from './Summary';
@@ -25,5 +26,6 @@ export interface CourseJson {
   publishStatus: string;
   thumbnail: string;
   courseAdmins?: string[];
+  topicConfig?: TopicConfig;
   topics: CourseTopicJson[];
 }

@@ -1,3 +1,4 @@
+import { TopicConfig } from './TopicConfig';
 import { CourseTopics } from './CourseTopics';
 
 export interface Course {
@@ -13,5 +14,6 @@ export interface Course {
   publishStatus: string;
   courseAdmins?: string[];
   thumbnail: string;
+  topicConfig?: TopicConfig;
   topics: CourseTopics[];
 }

@@ -55,6 +55,7 @@ export function getCoursesJson(
     coursePassCount: courseJson.coursePassCount?.trim()
       ? parseInt(courseJson.coursePassCount)
       : undefined,
+    topicConfig: courseJson.topicConfig,
     topics: topicsList,
   };
 

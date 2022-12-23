@@ -14,13 +14,12 @@
     "details": {
       "type": "string"
     },
-    "courseFailContent":  {
+    "courseFailContent": {
       "type": "string"
     },
-    "coursePassContent":  {
+    "coursePassContent": {
       "type": "string"
     },
-
     "duration": {
       "type": "string"
     },
@@ -45,6 +44,17 @@
           "type": "string"
         }
       ]
+    },
+    "topicConfig": {
+      "type": "object",
+      "properties": {
+        "showExplanations": {
+          "type": "boolean"
+        },
+        "showHints": {
+          "type": "boolean"
+        }
+      }
     },
     "topics": {
       "type": "array",
