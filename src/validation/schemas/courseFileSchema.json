@@ -54,7 +54,11 @@
         "showHints": {
           "type": "boolean"
         }
-      }
+      },
+      "required": [
+        "showExplanations",
+        "showHints"
+      ]
     },
     "topics": {
       "type": "array",
