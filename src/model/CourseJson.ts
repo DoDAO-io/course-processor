@@ -1,4 +1,4 @@
-import { TopicConfig } from 'src/model/TopicConfig';
+import { TopicConfig } from './TopicConfig';
 import { Question } from './Question';
 import { Reading } from './Reading';
 import { Summary } from './Summary';
