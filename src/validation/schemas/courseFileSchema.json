@@ -118,8 +118,7 @@
     "highlights",
     "publishStatus",
     "thumbnail",
-    "topics",
-    "priority"
+    "topics"
   ],
   "additionalProperties": false
 }
