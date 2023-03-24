@@ -104,6 +104,9 @@
         "additionalProperties": false
       },
       "additionalProperties": false
+    },
+    "priority": {
+      "type": "number"
     }
   },
   "required": [
@@ -115,7 +118,8 @@
     "highlights",
     "publishStatus",
     "thumbnail",
-    "topics"
+    "topics",
+    "priority"
   ],
   "additionalProperties": false
 }
